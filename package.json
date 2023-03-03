@@ -1,0 +1,41 @@
+{
+  "name": "app-api",
+  "version": "1.0.0",
+  "description": "A Backend to process request from Frontend",
+  "author": "Azoom",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "env $(grep -v '^#' .env) nodemon index.js",
+    "start": "env $(grep -v '^#' .env) node index.js",
+    "setup": "yarn setup:create-env",
+    "setup:create-env": "cp .env.template .env"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "camelcase-keys": "^6.2.2",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-promise-router": "^3.0.3",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.0",
+    "knex": "^2.4.2",
+    "knex-paginate": "^3.0.2",
+    "module-alias": "^2.2.2",
+    "multer": "^1.4.4",
+    "mysql2": "^3.1.2",
+    "nnn-router": "^1.0.5",
+    "path": "^0.12.7",
+    "snakecase-keys": "^3.2.0",
+    "statuses": "^1.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "_moduleAliases": {
+    "@": "./",
+    "@helpers": "./helpers/",
+    "@middlewares": "./middlewares/",
+    "@constants": "./constants/"
+  }
+}
